@@ -12,7 +12,7 @@ model = genai.GenerativeModel("gemini-pro")
 chat = model.start_chat(history=[])
 
 # Initialize Flask app
-app = Flask("Chatbot")
+app = Flask("friend.py")
 
 # Function to get Gemini AI's response
 def get_gemini_response(question):
