@@ -111,7 +111,7 @@
             font-size: 1.25rem;
             font-weight: bold;
             display: flex;
-            align-items: center
+            align-items: center;
             gap: 0.5rem;
         }
 
@@ -268,6 +268,47 @@
         .chat-messages::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.4);
         }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .chat-container {
+                width: 100%;
+                padding: 0.5rem; /* Reduce padding */
+            }
+
+            .chat-header {
+                padding: 0.5rem; /* Reduce padding */
+                flex-direction: column; /* Stack elements vertically */
+                align-items: flex-start; /* Align items to the start */
+            }
+
+            .header-text h1 {
+                font-size: 1.1rem; /* Reduce font size */
+            }
+
+            .header-text p {
+                font-size: 0.65rem; /* Reduce font size */
+            }
+
+            .chat-messages {
+                height: 300px; /* Reduce height for smaller screens */
+                padding: 1rem; /* Adjust padding */
+            }
+
+            .message-input {
+                padding: 0.5rem; /* Adjust padding */
+                font-size: 0.875rem; /* Adjust font size */
+            }
+
+            .send-button {
+                padding: 0.5rem; /* Adjust padding */
+                font-size: 0.875rem; /* Adjust font size */
+            }
+
+            .typing-indicator {
+                font-size: 0.75rem; /* Adjust font size */
+            }
+        }
     </style>
 </head>
 <body>
@@ -386,7 +427,7 @@
                 handleSendMessage();
             }
         });
-
+ 
         sendButton.addEventListener('click', handleSendMessage);
     </script>
 </body>
